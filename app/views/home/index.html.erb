@@ -1,0 +1,8 @@
+<% if member_signed_in? %>
+<%= link_to "Log out", destroy_member_session_path, method: :delete%>
+<% else %>
+<%= link_to "Log in", new_member_session_path %>
+<% end %>
+
+<%= link_to "Questions", questions_path%>
+<%= link_to "Tones", tones_path%> 

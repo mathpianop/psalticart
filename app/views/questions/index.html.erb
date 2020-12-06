@@ -1,3 +1,8 @@
 <%  @questions.each do |question|%>
-<%= link_to question.body, question_path(question) %>
+<%= link_to question.body, question_path(question) %> <br/>
 <% end %>
+
+<% if current_member.admin? %>
+<%= link_to "Add a new question", new_question_path%>
+<% end %>
+
