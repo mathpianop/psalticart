@@ -1,0 +1,7 @@
+<div>
+  <h1>Comment by <%= comment.member.name %></h1>
+  <p> <%= comment.body %></p>
+  <% if comment.member == current_member %>
+  <%= link_to "Delete comment", question_comment_path(comment.question, comment), method: :delete%>
+  <% end %>
+</div>

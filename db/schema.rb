@@ -10,16 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_06_033758) do
+ActiveRecord::Schema.define(version: 2020_12_06_224729) do
 
   create_table "comments", force: :cascade do |t|
     t.text "body"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "user_id", null: false
     t.integer "question_id", null: false
+    t.integer "member_id", null: false
     t.index ["question_id"], name: "index_comments_on_question_id"
-    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "members", force: :cascade do |t|
@@ -34,6 +33,9 @@ ActiveRecord::Schema.define(version: 2020_12_06_033758) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "admin", default: false
+    t.string "name"
+    t.string "jurisdiction"
+    t.text "background"
     t.index ["email"], name: "index_members_on_email", unique: true
     t.index ["reset_password_token"], name: "index_members_on_reset_password_token", unique: true
   end
@@ -44,15 +46,5 @@ ActiveRecord::Schema.define(version: 2020_12_06_033758) do
     t.text "body"
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "email", null: false
-    t.string "first_name", null: false
-    t.string "last_name", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "jurisdiction"
-  end
-
   add_foreign_key "comments", "questions"
-  add_foreign_key "comments", "users"
 end

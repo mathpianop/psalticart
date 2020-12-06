@@ -1,1 +1,15 @@
 <%= @question.body %>
+
+<p>
+<% if current_member.try(:admin?)%>
+<%= link_to "Delete Question", question_path, method: :delete, data: {confirm: "Really delete the question?"} %>
+</p>
+<% end %>
+
+<% if member_signed_in? %>
+<%= render partial: "comments/form"%>
+<% end %>
+<%= render partial: "comment", collection: @question.comments %>
+
+
+<%= link_to ">> Questions", questions_path%>
