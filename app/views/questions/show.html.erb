@@ -7,7 +7,9 @@
 <% end %>
 
 <% if member_signed_in? %>
-<%= render partial: "comments/form"%>
+  <%= render partial: "comments/form"%>
+<% else %>
+  <%= link_to "Sign in to leave a comment!", new_member_session_path%>
 <% end %>
 <%= render partial: "comment", collection: @question.comments %>
 
