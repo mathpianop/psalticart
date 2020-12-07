@@ -1,5 +1,5 @@
 <div>
-  <h4>Comment by <%= comment.member.name %></h1>
+  <h4>Comment by <%= link_to comment.member.name, member_path(comment.member)%></h1>
   <p> Jursidiction: <%= comment.member.jurisdiction%></p>
   <p> <%= comment.body %></p>
   

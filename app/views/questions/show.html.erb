@@ -3,7 +3,9 @@
 <p>
 <% if current_member.try(:admin?)%>
 <%= link_to "Delete Question", question_path, method: :delete, data: {confirm: "Really delete the question?"} %>
+<%= link_to "Edit Question", edit_question_path%>
 </p>
+
 <% end %>
 
 <% if member_signed_in? %>
