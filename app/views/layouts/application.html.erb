@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Psalticart</title>
+    <title>Psaltic Art</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,11 +12,26 @@
   <body>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
+    <%# All of this (the log button and the navbar)
+    needs to eventually go in a separate layout file %>
       <div class="log-container">
         <% if member_signed_in? %>
           <%= link_to "Log Out", destroy_member_session_path, method: :delete, class: "log"%>
+        <% else %>
+          <%= link_to "Log In", new_member_session_path, class: "log"%>
         <% end %>
       </div>
+
+      <nav>
+        <ul>
+          <li>
+            <%= link_to "Questions", questions_path, class: "nav-child"%>
+          </li><!--
+          --><li>
+            <%= link_to "Tones", tones_path%> 
+          </li>
+        </ul>
+      </nav>
     <%= yield %>
   </body>
 </html>
