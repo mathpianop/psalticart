@@ -23,13 +23,17 @@
       </div>
 
       <nav>
-        <ul>
-          <li>
-            <%= link_to "Questions", questions_path, class: "nav-child"%>
+        <ul class="nav-container">
+          <li class=>
+            <%= link_to "Forum", questions_path, class: "nav-child"%>
           </li><!--
           --><li>
             <%= link_to "Tones", tones_path%> 
-          </li>
+          </li><!--
+        --><li><a href="#">Scales</a></li><!--
+        --><li><a href="#">Genres</a></li><!--
+        --><li><a href="#">Notation</a></li><!--
+        --><li class="about"><a href="#">About this project</a></li>
         </ul>
       </nav>
     <%= yield %>
