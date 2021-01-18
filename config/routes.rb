@@ -7,6 +7,6 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  resources :tones
+  resources :tones, only: [:show, :index]
   resources :members, only: [:show]
 end
