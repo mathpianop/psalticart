@@ -9,4 +9,8 @@ Rails.application.routes.draw do
 
   resources :tones, only: [:show, :index]
   resources :members, only: [:show]
+  # Provisional
+  get '/scales', to: 'scales#index'
+  get '/scales/diatonic', to: 'scales#diatonic'
+  get 'scales/soft_chromatic', to: 'scales#soft_chromatic'
 end

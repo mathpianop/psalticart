@@ -1,3 +1,87 @@
 // Place all the styles related to the Scales controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.scale-link-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: space-around;
+  width: 800px;
+  margin: 50px auto 0 auto;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 25px;
+  font-weight: 200;
+}
+
+
+.scale-link {
+  height: 50px;
+  width: 180px;
+  list-style: none;
+  background-color: #1419a7;
+  border-radius: 7px;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+}
+
+.scale-link:hover {
+  
+}
+
+.scale-link a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.interactive-scale {
+  /*This background color is currently a transparent form of purple*/
+  background-color: goldenrod;
+  box-shadow: 0 0 7px rgb(90, 84, 90);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(9, 70px);
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  padding: 20px;
+  width: 800px;
+  height: 220px;
+  margin: 50px auto;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+}
+
+.note {
+  font-weight: 700;
+  font-size: 30px;
+  color: black;
+  width: 70px;
+  border: 5px solid black;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-row: 2 / span 2;
+}
+
+.alt-1 {
+  grid-row: 3 / span 2;
+}
+
+.alt-2 {
+  grid-row: 1 / span 2;
+}
+
+.alt-3 {
+  grid-row: 1 / span 1;
+}
+
+#Fsharp3down {
+  grid-column: 4;
+}
+
+.note:hover {
+  background-color: #ecc666;
+  
+  cursor: pointer;
+}
