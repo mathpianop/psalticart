@@ -1,6 +1,15 @@
 
+<div class="scale-name-container">
+  <%= link_to "Scales", "/scales", class: "basic-link", id: "link-to-scales" %>
+  <h1 id="scale-name">Soft Chromatic Scale</h1>
+</div>
 
 <section class="interactive-scale">
+
+  <div id="how-to-use-soft"> 
+    Hover over a note to hear it; click to hold it. <br>
+    If notes do not play, click anwhere on the page first.
+  </div>
   <div class="note" id="C3">
     C3
     <%= audio_tag("c3pitch.m4a", id: "clip-C3")%>
@@ -44,6 +53,13 @@
     D4
     <%= audio_tag("d4pitch.m4a", id: "clip-D4")%>
   </div>
-  <%= javascript_pack_tag 'soft_chromatic.js'%>
-<%= javascript_pack_tag 'scales.js'%>
+  <div id="arrow-explanation"> 
+  ↓ and ↑ indicate a deviation of 1/3 semitone (33 cents, or 2 <i>moria</i>) <br>
+  from 12-tone equal temperament 
+ </div>
+ 
 </section>
+
+
+ <%= javascript_pack_tag 'soft_chromatic.js'%>
+<%= javascript_pack_tag 'scales.js'%>

@@ -2,41 +2,90 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+body {
+  font-family: 'Baskervville', serif;
+}
 
-.scale-link-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  align-items: space-around;
+#scale-links-title {
+  margin: 20px auto;
+  border-top: 1px solid gray;
   width: 800px;
-  margin: 50px auto 0 auto;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 25px;
-  font-weight: 200;
-}
-
-
-.scale-link {
-  height: 50px;
-  width: 180px;
-  list-style: none;
-  background-color: #1419a7;
-  border-radius: 7px;
-  color: white;
+  font-family: 'Baskervville', serif;
   text-align: center;
-  line-height: 50px;
+  font-size: 20px;
+
 }
 
-.scale-link:hover {
+.scale-name-container {
+  position: relative;
+  margin: 30px auto 0 auto;
+  border-bottom: 3px solid black;
+  width: 800px;
+  text-align: center;
+}
+
+#link-to-scales {
+  display: block;
+  position: absolute;
+  left: -20px;
+  width: 100px;
+  height: 50px;
+}
+
+#scale-name {
+  display: inline-block;
+  text-align: center;
+  font-weight: 400;
+  font-size: 50px;
   
 }
 
-.scale-link a {
-  display: block;
-  width: 100%;
-  height: 100%;
+
+
+.scale-link-container {
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: space-around;
+  grid-gap: 10px;
+  max-width: 800px;
+  margin: 50px auto 0 auto;
+  
+  
 }
+
+.link-list-item {
+  list-style: none;
+}
+
+
+.basic-link {
+  display: block;
+  height: 50px;
+  width: 180px;
+  background-color: goldenrod;
+  border-radius: 7px;
+  box-shadow: 0 0 7px #5a545a;
+  color: black;
+  font-family: 'Baskervville', serif;
+  text-align: center;
+  line-height: 50px;
+  font-size: 23px;
+  font-weight: 200;
+}
+
+.basic-link:focus {
+  box-shadow: 0 0 0;
+}
+
+
+.basic-link:hover {
+  cursor: pointer;
+}
+
+
+
 .interactive-scale {
-  /*This background color is currently a transparent form of purple*/
   background-color: goldenrod;
   box-shadow: 0 0 7px rgb(90, 84, 90);
   border-radius: 10px;
@@ -47,9 +96,27 @@
   padding: 20px;
   width: 800px;
   height: 220px;
-  margin: 50px auto;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 10px auto 30px auto;
   
+  
+}
+
+#arrow-explanation {
+  grid-column: 1 / 6;
+  grid-row: 4 / 5;
+  font-size: 14px;
+}
+
+#how-to-use {
+  grid-column: 1 / 6;
+  grid-row: 1 / 2;
+  font-size: 14px;
+}
+
+#how-to-use-soft {
+  grid-column: 6 / 11;
+  grid-row: 1 / 2;
+  font-size: 14px;
 }
 
 .note {
@@ -62,6 +129,7 @@
   justify-content: center;
   align-items: center;
   grid-row: 2 / span 2;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .alt-1 {
@@ -85,3 +153,9 @@
   
   cursor: pointer;
 }
+
+
+
+
+
+

@@ -4,7 +4,10 @@
     <title>Psaltic Art</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baskervville&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -14,6 +17,9 @@
       <p class="alert"><%= alert %></p>
     <%# All of this (the log button and the navbar)
     needs to eventually go in a separate layout file %>
+      <div class="logo">
+      Psaltic Art
+      </div>
       <div class="log-container">
         <% if member_signed_in? %>
           <%= link_to "Log Out", destroy_member_session_path, method: :delete, class: "log"%>

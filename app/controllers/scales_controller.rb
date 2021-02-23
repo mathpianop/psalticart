@@ -1,3 +1,2 @@
 class ScalesController < ApplicationController
-  
 end
