@@ -7,6 +7,8 @@
     notes[i].addEventListener("mouseenter", playit);
     notes[i].addEventListener("mouseout", stopit);
     notes[i].addEventListener("click", togglePlay);
+    notes[i].addEventListener("touchstart", playit);
+    notes[i].addEventListener("touchend", stopit);
   };
 
   function togglePlay() {
