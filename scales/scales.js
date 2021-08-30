@@ -1,16 +1,16 @@
+const notes = document.getElementsByClassName("note");
+
+Array.from(notes).forEach(note => {
+  note.clip = document.getElementById(`clip-${note.id}`);
+  note.clip.hold = false
+  note.addEventListener("mouseenter", playit);
+  note.addEventListener("mouseout", stopit);
+  note.addEventListener("click", togglePlay);
+  note.addEventListener("touchstart", playit);
+  note.addEventListener("touchend", stopit);
+})
 
 
-for (i = 0; i < notes.length; i++) {
-  console.log(notes);
-  let noteId = notes[i].id;
-  notes[i].clip = document.getElementById(`clip-${noteId}`);
-  notes[i].clip.hold = false
-  notes[i].addEventListener("mouseenter", playit);
-  notes[i].addEventListener("mouseout", stopit);
-  notes[i].addEventListener("click", togglePlay);
-  notes[i].addEventListener("touchstart", playit);
-  notes[i].addEventListener("touchend", stopit);
-};
 
 function togglePlay() {
   if (this.clip.hold === false) {
