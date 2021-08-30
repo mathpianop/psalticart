@@ -1,9 +1,0 @@
-<div>
-  <h4>Comment by <%= link_to comment.member.name, member_path(comment.member)%></h1>
-  <p> Jursidiction: <%= comment.member.jurisdiction%></p>
-  <p> <%= comment.body %></p>
-  
-  <% if current_member == comment.member || current_member.try(:admin) %>
-  <%= link_to "Delete comment", question_comment_path(comment.question, comment), method: :delete%>
-  <% end %>
-</div>
