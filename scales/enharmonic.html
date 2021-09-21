@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" media="all" href="../style/application.css" data-turbolinks-track="reload">
+    <link rel="stylesheet" media="all" href="../style/scales.css" data-turbolinks-track="reload">
+    <title>Psaltic Art</title>
+  </head>
+  <body>
+    <div class="logo">Psaltic Art</div>
+    <div class="scale-name-container">
+      <a class="basic-link" id="link-to-scales" href="./index.html">Scales</a>
+      <h1 id="scale-name">Enharmonic Scale</h1>
+    </div>
+    <section class="interactive-scale">
+      <div id="how-to-use">
+        Hover over a note to hear it; click to hold it. 
+        If notes do not play, click anwhere on the page first.
+      </div>
+      <div class="note" id="C3">
+        C3
+        <audio id="clip-C3" src="../audios/c3pitch.m4a"></audio>
+      </div>
+      <div class="note" id="D3" style="background-color: transparent;">
+        D3
+        <audio id="clip-D3" src="../audios/d3pitch.m4a"></audio>
+      </div>
+
+      <div class="note" id="E3" style="background-color: transparent;">
+        E3
+        <audio id="clip-E3" src="../audios/e3pitch.m4a"></audio>
+      </div>
+      <div class="note" id="F3">
+        F3
+        <audio id="clip-F3" src="../audios/f3pitch.m4a"></audio>
+      </div>
+      <div class="note" id="G3">
+        G3
+        <audio id="clip-G3" src="../audios/g3pitch.m4a"></audio>
+      </div>
+      <div class="note" id="A3">
+        A3
+        <audio id="clip-A3" src="../audios/a3pitch.m4a"></audio>
+      </div>
+      <div class="note" id="Bflat3">
+        Bb3
+        <audio id="clip-Bflat3" src="../audios/bflat3pitch.m4a"></audio>
+      </div>
+      
+      <div class="note" id="C4">
+        C4
+        <audio id="clip-C4" src="../audios/c4pitch.m4a"></audio>
+      </div>
+      <div class="note" id="D4">
+        D4
+        <audio id="clip-D4" src="../audios/d4pitch.m4a"></audio>
+      </div>
+      <script src="./scales.js"></script>
+    </section>
+  </body>
+</html>
