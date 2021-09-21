@@ -1,0 +1,10 @@
+#scales-link {
+  text-decoration: underline;
+  color: blue;
+}
+
+#introduction {
+  width: 800px;
+  margin: auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
