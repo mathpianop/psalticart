@@ -1,16 +1,3 @@
-const notes = document.getElementsByClassName("note");
-
-Array.from(notes).forEach(note => {
-  note.clip = document.getElementById(`clip-${note.id}`);
-  note.clip.hold = false
-  note.addEventListener("mouseenter", playit);
-  note.addEventListener("mouseout", stopit);
-  note.addEventListener("click", togglePlay);
-  note.addEventListener("touchstart", playit);
-  note.addEventListener("touchend", stopit);
-})
-
-
 
 function togglePlay() {
   if (this.clip.hold === false) {
@@ -22,16 +9,43 @@ function togglePlay() {
   };
 };
 
-function playit() {
+function playClip() {
   this.style.backgroundColor = "#ecc666";
   this.clip.load();
   this.clip.play();
 };
 
-function stopit() {
+function stopClip() {
   if (this.clip.hold === false) {
     this.clip.pause();
     this.style.backgroundColor = "transparent";
     
   };
 }
+
+function defineClip(note) {
+  note.clip = document.getElementById(`clip-${note.id}`);
+  note.clip.hold = false
+}
+
+function attachEventListeners(note) {
+  note.addEventListener("mouseenter", playClip);
+  note.addEventListener("mouseout", stopClip);
+  note.addEventListener("click", togglePlay);
+  note.addEventListener("touchstart", playClip);
+  note.addEventListener("touchend", stopClip);
+}
+
+function removeLoadingMask() {
+  
+}
+
+const notes = document.getElementsByClassName("note");
+
+Array.from(notes).forEach(note => {
+  defineClip(note)
+  attachEventListeners(note);
+})
+
+const loadingMask = document.getElementById("loading-mask")
+loadingMask.addEventListener("canplaythrough", removeLoadingMask)
